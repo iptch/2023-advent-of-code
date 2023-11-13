@@ -8,4 +8,11 @@
    | |        \____/                                                                        
    |_|                                                                                      
 ```
-May your coffee be strong and your bugs be weak! Happy coding!
+May your coffee be strong and your bugs be weak!
+
+## Commit guidelines
+ - Put everything in your own folder
+ - Don't touch other's peoples folders
+ - Put memes into the readme
+
+Happy coding!
