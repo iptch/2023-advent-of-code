@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #include "aoc_utils/aoc_utils.h"
 
 #define INPUT_FILE "input.txt"

@@ -8,3 +8,4 @@ add_subdirectory(aoc_utils)
 # Add subdirectories for each day
 ############################################################
 add_subdirectory(src/day_1)
+add_subdirectory(src/day_2)
