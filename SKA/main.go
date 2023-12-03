@@ -8,5 +8,7 @@ func main() {
 	// puzzles.Day1Task1()
 	// puzzles.Day1Task2()
 	// puzzles.Day2Task1()
-	puzzles.Day2Task2()
+	// puzzles.Day2Task2()
+	// puzzles.Day3Task1()
+	puzzles.Day3Task2Copy()
 }
