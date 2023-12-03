@@ -9,12 +9,12 @@ REGEX_SYMBOLS = r'[^\w\s.]'
 REGEX_GEARS = r'\*'
 
 def extract(regex, line):
-    symbols = []
+    result = []
 
     for match in re.finditer(regex, line):
-        symbols.append((match.group(), match.start(), match.end()))
+        result.append((match.group(), match.start(), match.end()))
 
-    return symbols
+    return result
 
 def is_adjacent_to_symbol(data, row, col):
     for i in range(row - 1, row + 2):

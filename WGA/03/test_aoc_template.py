@@ -24,10 +24,17 @@ def test_extract_gears():
     """Test that gears are extracted properly."""
     assert aoc.extract(aoc.REGEX_GEARS, "...*......") == [("*", 3, 4)]
 
-@pytest.mark.skip(reason="Not implemented")
 def test_is_adjacent_to_symbol(example1):
-    """Test that gears are extracted properly."""
-    assert aoc.is_adjacent_to_symbol(example1, 0, 0) == True
+    """Test that adjacent to symbol is checked properly."""
+    assert aoc.is_adjacent_to_symbol(example1, 0, 2) == True
+
+def test_get_adjacent_numbers(example1):
+    """Test that adjacent numbers are retrieved properly."""
+    assert aoc.get_adjacent_numbers([
+        [("467", 0, 3), ("114", 5, 8)],
+        [],
+        [("35", 2, 4), ("633", 6, 9)]
+    ], 1, 3) == [467, 35]
 
 def test_parse_example1(example1):
     """Test that input is parsed properly."""
