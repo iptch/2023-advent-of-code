@@ -3,6 +3,9 @@ package dev.brathis.aoc2023.puzzles;
 import dev.brathis.aoc2023.common.PuzzleInputLoader;
 
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -51,5 +54,15 @@ public abstract class Puzzle {
     }
     public void runTest() throws Exception {
         puzzle(getTestPuzzleInput());
+    }
+
+    protected List<String> linesAsList(BufferedReader puzzleInput) throws IOException {
+        List<String> lines = new ArrayList<>();
+        String line = puzzleInput.readLine();
+        while (line != null) {
+            lines.add(line);
+            line = puzzleInput.readLine();
+        }
+        return lines;
     }
 }
