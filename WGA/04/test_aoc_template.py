@@ -16,6 +16,10 @@ def example2():
     puzzle_input = (PUZZLE_DIR / "example2.txt").read_text().strip()
     return aoc.parse(puzzle_input)
 
+def test_get_copies():
+    """Test that number of copies is calculated properly."""
+    assert aoc.get_copies([[41, 48, 83, 86, 17], [83, 86,  6, 31, 17,  9, 48 ,53]]) == 4
+
 def test_parse_example1(example1):
     """Test that input is parsed properly."""
     assert example1 == [
