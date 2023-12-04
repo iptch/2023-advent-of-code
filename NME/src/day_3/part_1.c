@@ -30,6 +30,11 @@ void do_work(char **lines, int line_count, const int *chars_per_line) {
         }
     }
     printf("%d\n", res);
+
+    for (int i=0; i<line_count; i++) {
+        free(visited[i]);
+    }
+    free(visited);
 }
 
 int scan(bool **visited, char **lines, int m, int n, int i, int j) {
