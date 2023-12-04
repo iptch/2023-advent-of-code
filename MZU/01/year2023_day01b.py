@@ -1,4 +1,5 @@
 import re
+from timeit import default_timer as timer
 
 from aocd import data
 
@@ -39,4 +40,6 @@ def main():
 
 
 if __name__ == '__main__':
+    start = timer()
     main()
+    print(f"Completed in {timer() - start} sec)")
