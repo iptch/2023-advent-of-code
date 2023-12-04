@@ -44,9 +44,9 @@ def part2(data):
     cards = numpy.ones(len(data), dtype=int)
 
     for i, card in enumerate(cards):
-        points = get_copies(data[i])
+        copies = get_copies(data[i])
 
-        for k in range(i + 1, min(i + points + 1, len(cards))):
+        for k in range(i + 1, min(i + copies + 1, len(cards))):
             cards[k] += card
 
     return numpy.sum(cards)
