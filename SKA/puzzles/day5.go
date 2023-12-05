@@ -38,6 +38,9 @@ func Day5Task1() {
 		seeds = append(seeds, stringToNumber(seed))
 	}
 
+	// skip empty line before mappings start
+	scanner.Scan()
+
 	readMaps(scanner, &seed2Soil)
 	readMaps(scanner, &soil2Fert)
 	readMaps(scanner, &fert2Water)
@@ -64,8 +67,7 @@ func Day5Task1() {
 }
 
 func readMaps(scanner *bufio.Scanner, maps *[]GardenerMap) {
-	// skip empty line and title of mapping in text file
-	scanner.Scan()
+	// title of mapping in text file
 	scanner.Scan()
 
 	for scanner.Scan() {
