@@ -10,5 +10,7 @@ func main() {
 	// puzzles.Day2Task1()
 	// puzzles.Day2Task2()
 	// puzzles.Day3Task1()
-	puzzles.Day3Task2Copy()
+	// puzzles.Day3Task2Copy()
+	// puzzles.Day4Task1()
+	puzzles.Day4Task2()
 }
