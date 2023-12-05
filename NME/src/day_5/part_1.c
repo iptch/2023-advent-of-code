@@ -94,4 +94,9 @@ void do_work(char **lines, int line_count, const int *chars_per_line) {
     }
 
     printf("%lld", res);
+
+    for (int i=0; i<NUM_MAPS; i++) {
+        free(maps[i]);
+    }
+    free(maps);
 }

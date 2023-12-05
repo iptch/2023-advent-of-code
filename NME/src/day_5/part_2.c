@@ -5,14 +5,14 @@
 #include <ctype.h>
 #include "aoc_utils/aoc_utils.h"
 
-#define IS_EXAMPLE
-#define DEBUG 1
+//#define IS_EXAMPLE
+#define DEBUG 0
 #ifdef IS_EXAMPLE
 #define INPUT_FILE "example1.txt"
 #define NUM_SEEDS 4
 #else
 #define INPUT_FILE "input.txt"
-#define NUM_SEEDS 2
+#define NUM_SEEDS 20
 #endif
 
 #define NUM_MAPS 7
@@ -29,14 +29,7 @@ struct interval {
     struct interval *next;
 };
 
-struct tri_map {
-    bool o1;
-    bool o2;
-    bool o3;
-};
-
 void do_work(char **lines, int line_count, const int *chars_per_line);
-long long map_seed(long long seed, struct map *m);
 size_t add_interval(struct interval *start, struct interval *to_add);
 struct interval *get_interval(struct interval *start);
 bool map_interval(struct interval *i, struct map m, struct interval *o1, struct interval *o2, struct interval *o3);
@@ -45,13 +38,6 @@ bool intersect(long long start_a, long long end_a, long long start_b, long long 
 int main(int argc, char *argv[]) {
     execute_on_input(INPUT_FILE, &do_work);
     return 0;
-}
-
-long long map_seed(long long seed, struct map *m) {
-    if (seed < m->source || seed > m->source + m->range) {
-        return -1LL;
-    }
-    return seed + (m->destination - m->source);
 }
 
 bool intersect(long long start_a, long long end_a, long long start_b, long long end_b) {
@@ -102,6 +88,7 @@ size_t add_interval(struct interval *start, struct interval *to_add) {
                 current = current->next;
                 res++;
             }
+            free(to_add);
             return res;
         }
         res++;
@@ -110,6 +97,7 @@ size_t add_interval(struct interval *start, struct interval *to_add) {
     if (intersect(current->start, current->end, to_add->start, to_add->end)) {
         current->start = minll(current->start, to_add->start);
         current->end = maxll(current->end, to_add->end);
+        free(to_add);
         return res;
     }
     current->next = to_add;
@@ -204,33 +192,26 @@ void do_work(char **lines, int line_count, const int *chars_per_line) {
                     if (map_interval(current_interval, maps[j][k], first_interval, second_interval, third_interval)) {
                         if (first_interval->start != -1LL) {
                             add_interval(start_interval, first_interval);
+                        } else {
+                            free(first_interval);
                         }
                         add_interval(new_start_interval, second_interval);
                         if (third_interval->start != -1LL) {
                             add_interval(start_interval, third_interval);
+                        } else {
+                            free(third_interval);
                         }
                         mapped = true;
-                    } else {
-                        add_interval(start_interval, first_interval);
+                        break;
                     }
                 }
                 if (!mapped) {
-                    struct interval *current_inter = start_interval->next;
-                    struct interval *prev_inter = start_interval;
-                    while (current_inter->next) {
-                        prev_inter = current_inter;
-                        current_inter = current_inter->next;
-                    }
-                    prev_inter->next = NULL;
+                    add_interval(new_start_interval, current_interval);
                 }
             }
 
+            free(start_interval);
             start_interval = new_start_interval;
-        }
-        struct interval *current_i = start_interval->next;
-        while (current_i) {
-            res = minll(current_i->start, res);
-            current_i = current_i->next;
         }
 
         if (DEBUG) {
@@ -241,7 +222,20 @@ void do_work(char **lines, int line_count, const int *chars_per_line) {
             }
             printf("\n\n");
         }
+
+        struct interval *current_i = start_interval->next;
+        while (current_i) {
+            res = minll(current_i->start, res);
+            free(current_i);
+            current_i = current_i->next;
+        }
+        free(start_interval);
     }
     printf("%lld", res);
 
+    free(seed_intervals);
+    for (int i=0; i<NUM_MAPS; i++) {
+        free(maps[i]);
+    }
+    free(maps);
 }
