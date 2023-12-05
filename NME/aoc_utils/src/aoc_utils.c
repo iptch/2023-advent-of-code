@@ -101,3 +101,11 @@ int min(int a, int b) {
 int max(int a, int b) {
     return -min(-a, -b);
 }
+
+long long minll(long long a, long long b) {
+    return a < b ? a : b;
+}
+
+long long maxll(long long a, long long b) {
+    return -minll(-a, -b);
+}
