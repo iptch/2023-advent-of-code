@@ -42,4 +42,4 @@ def main():
 if __name__ == '__main__':
     start = timer()
     main()
-    print(f"Completed in {timer() - start} sec)")
+    print(f"Completed in {timer() - start} sec")
