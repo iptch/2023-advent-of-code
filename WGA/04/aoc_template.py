@@ -17,13 +17,14 @@ def get_copies(card):
 def parse(puzzle_input):
     """Parse input."""
 
-    result = []
+    lines = puzzle_input.splitlines()
+    result = [None] * len(lines)
 
-    for line in puzzle_input.splitlines():
-        str = re.sub(r'Card\s+\d+: ', '', line).split("|")
+    for i, line in enumerate(lines):
+        str = re.sub(r'Card\s+\d+: ', "", line).split("|")
         winning_numbers = [int(line.group()) for line in list(re.finditer(r'\d+', str[0]))]
         my_numbers = [int(line.group()) for line in list(re.finditer(r'\d+', str[1]))]
-        result.append([winning_numbers, my_numbers])
+        result[i] = [winning_numbers, my_numbers]
 
     return result
 
