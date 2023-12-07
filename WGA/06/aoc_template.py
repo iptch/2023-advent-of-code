@@ -2,15 +2,15 @@
 
 import pathlib
 import sys
+import math
 
 def get_number_of_options(time, distance):
-    options = 0
+    discriminant = math.sqrt(time * time - 4 * (distance + 1))
 
-    for j in range(1, time):
-        if j * (time - j) > distance:
-            options += 1
+    min_button_time = math.ceil((time - discriminant) / 2)
+    max_button_time = math.floor((time + discriminant) / 2)
 
-    return options
+    return max_button_time - min_button_time + 1
 
 def parse(puzzle_input):
     """Parse input."""
