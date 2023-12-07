@@ -64,13 +64,13 @@ def get_most_frequent_card(hand):
     return max(card_count, key=card_count.get)
 
 def get_hand_strength(hand_and_bid, joker = False):
-    hand = hand_and_bid[0]
+    hand = replaced_hand = hand_and_bid[0]
 
     if joker and hand != "JJJJJ":
         most_frequent_card = get_most_frequent_card(hand)
-        hand = hand.replace("J", most_frequent_card)
+        replaced_hand = hand.replace("J", most_frequent_card)
 
-    return (get_type_rank(hand),
+    return (get_type_rank(replaced_hand),
             get_card_rank(hand[0], joker),
             get_card_rank(hand[1], joker),
             get_card_rank(hand[2], joker),
