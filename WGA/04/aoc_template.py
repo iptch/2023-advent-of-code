@@ -21,9 +21,9 @@ def parse(puzzle_input):
     result = [None] * len(lines)
 
     for i, line in enumerate(lines):
-        str = re.sub(r'Card\s+\d+: ', "", line).split("|")
-        winning_numbers = [int(line.group()) for line in list(re.finditer(r'\d+', str[0]))]
-        my_numbers = [int(line.group()) for line in list(re.finditer(r'\d+', str[1]))]
+        str = re.sub(r"Card\s+\d+: ", "", line).split("|")
+        winning_numbers = [int(line.group()) for line in list(re.finditer(r"\d+", str[0]))]
+        my_numbers = [int(line.group()) for line in list(re.finditer(r"\d+", str[1]))]
         result[i] = [winning_numbers, my_numbers]
 
     return result

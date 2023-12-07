@@ -37,8 +37,8 @@ def part1(data):
 def part2(data):
     """Solve part 2."""
 
-    time = int(''.join(map(str, data["time"])))
-    distance = int(''.join(map(str, data["distance"])))
+    time = int("".join(map(str, data["time"])))
+    distance = int("".join(map(str, data["distance"])))
 
     return get_number_of_options(time, distance)
 

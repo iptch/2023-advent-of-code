@@ -4,9 +4,9 @@ import pathlib
 import sys
 import re
 
-REGEX_NUMBERS = r'\d+'
-REGEX_SYMBOLS = r'[^\w\s.]'
-REGEX_GEARS = r'\*'
+REGEX_NUMBERS = r"\d+"
+REGEX_SYMBOLS = r"[^\w\s.]"
+REGEX_GEARS = r"\*"
 
 def extract(regex, line):
     result = []
