@@ -27,7 +27,7 @@ def text2digit(text):
         return "9"
 
 # Requires lookahead to also find overlapping matches (e.g. "fiveight")
-regex = r"(?=(\d|one|two|three|four|five|six|seven|eight|nine))"
+REGEX = r"(?=(\d|one|two|three|four|five|six|seven|eight|nine))"
 
 def parse(puzzle_input):
     """Parse input."""
@@ -48,7 +48,7 @@ def part2(data):
     result = 0
 
     for line in data:
-        matches = re.findall(regex, line)
+        matches = re.findall(REGEX, line)
         result += int("".join(text2digit(matches[0]) + text2digit(matches[-1])))
 
     return result
