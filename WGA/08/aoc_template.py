@@ -5,6 +5,19 @@ import sys
 import re
 import math
 
+def get_step(instructions, nodes, start_element, stop_regex):
+
+    element = start_element
+    step = 0
+
+    while re.match(stop_regex, element) is None:
+        i = step % len(instructions)
+        instruction = instructions[i]
+        element = next(node for node in nodes if node[0] == element)[1 if instruction == "L" else 2]
+        step += 1
+        
+    return step
+
 def lcm_of_array(integers):
     result = integers[0]
 
@@ -23,19 +36,6 @@ def parse(puzzle_input):
     result["nodes"] = [re.findall(r"[A-Z|1-9]{3}", line) for line in lines[2:]]
 
     return result
-
-def get_step(instructions, nodes, start_element, stop_regex):
-
-    element = start_element
-    step = 0
-
-    while re.match(stop_regex, element) is None:
-        i = step % len(instructions)
-        instruction = instructions[i]
-        element = next(node for node in nodes if node[0] == element)[1 if instruction == "L" else 2]
-        step += 1
-        
-    return step
 
 def part1(data):
     """Solve part 1."""
