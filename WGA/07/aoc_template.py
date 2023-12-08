@@ -21,35 +21,35 @@ def get_type_rank(hand):
 
     if re.search(r"(.)\1\1\1\1", sorted_hand) is not None:
         return 6
-    elif re.search(r"(.)\1\1\1", sorted_hand) is not None:
+    if re.search(r"(.)\1\1\1", sorted_hand) is not None:
         return 5
-    elif (re.search(r"(.)\1\1(.)\2", sorted_hand) is not None or
+    if (re.search(r"(.)\1\1(.)\2", sorted_hand) is not None or
           re.search(r"(.)\1(.)\2\2", sorted_hand) is not None):
         return 4
-    elif re.search(r"(.)\1\1", sorted_hand) is not None:
+    if re.search(r"(.)\1\1", sorted_hand) is not None:
         return 3
-    elif (re.search(r".(.)\1(.)\2", sorted_hand) is not None or
+    if (re.search(r".(.)\1(.)\2", sorted_hand) is not None or
           re.search(r"(.)\1.(.)\2", sorted_hand) is not None or
           re.search(r"(.)\1(.)\2.", sorted_hand) is not None):
         return 2
-    elif re.search(r"(.)\1", sorted_hand) is not None:
+    if re.search(r"(.)\1", sorted_hand) is not None:
         return 1
-    else:
-        return 0
+    
+    return 0
 
 def get_card_rank(card, joker = False):
-    if card.isdigit():
-        return int(card)
-    elif card == "T":
+    if card == "T":
         return 10
-    elif card == "J":
+    if card == "J":
         return 1 if joker else 11
-    elif card == "Q":
+    if card == "Q":
         return 12
-    elif card == "K":
+    if card == "K":
         return 13
-    elif card == "A":
+    if card == "A":
         return 14
+    
+    return int(card)
     
 def get_most_frequent_card(hand):
     card_count = {}
