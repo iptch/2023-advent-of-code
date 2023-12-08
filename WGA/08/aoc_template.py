@@ -45,11 +45,9 @@ def part1(data):
 def part2(data):
     """Solve part 2."""
 
-    start_elements = [node[0] for node in data["nodes"] if node[0].endswith("A")]
-    steps = [None] * len(start_elements)
-
-    for i, start_element in enumerate(start_elements):
-        steps[i] = get_step(data["instructions"], data["nodes"], start_element, r"[A-Z|1-9]{2}Z")
+    instructions, nodes = data["instructions"], data["nodes"]
+    start_elements = [node[0] for node in nodes if node[0].endswith("A")]
+    steps = [get_step(instructions, nodes, start_element, r"[A-Z|1-9]{2}Z") for start_element in start_elements]
         
     return lcm_of_array(steps)
 
