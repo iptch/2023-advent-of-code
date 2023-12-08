@@ -5,7 +5,7 @@ import sys
 import math
 
 def get_number_of_options(time, distance):
-    discriminant = math.sqrt(time * time - 4 * (distance + 1))
+    discriminant = math.sqrt(time ** 2 - 4 * (distance + 1))
 
     min_button_time = math.ceil((time - discriminant) / 2)
     max_button_time = math.floor((time + discriminant) / 2)
