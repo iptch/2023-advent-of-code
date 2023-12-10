@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <assert.h>
 #include "aoc_utils/aoc_utils.h"
 
 void execute_on_input(const char *filename, void (*do_work)(char **lines, int line_count, const int *chars_per_line)) {
@@ -108,4 +109,38 @@ long long minll(long long a, long long b) {
 
 long long maxll(long long a, long long b) {
     return -minll(-a, -b);
+}
+
+struct queue *queue_init(void *item) {
+    struct queue *q = (struct queue *)malloc(sizeof(struct queue));
+    q->item = item;
+    q->next = NULL;
+    return q;
+}
+
+
+void queue_add(struct queue *q, void *item) {
+    assert(q);
+    struct queue *prev = q;
+    struct queue *curr = q->next;
+    while (curr) {
+        prev = curr;
+        curr = curr->next;
+    }
+    prev->next = (struct queue *)malloc(sizeof(struct queue));
+    prev->next->item = item;
+    prev->next->next = NULL;
+}
+
+/* *
+ * pops first item
+ * returns new queue head
+ * puts items in item_ptr
+ * */
+struct queue *queue_pop(struct queue *q, void **item_ptr) {
+    assert(q);
+    *item_ptr = q->item;
+    struct queue *res = q->next;
+    free(q);
+    return res;
 }
