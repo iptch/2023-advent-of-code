@@ -179,8 +179,7 @@ def part2(data):
 
     for x in extpipemap:
         plt.plot(x[1], h - x[0], '.b')
-    plt.savefig("0", dpi=1000)
-    plt.show()
+    plt.savefig("0")
 
     for i in range(w):
         outmap.add((-1, i))
@@ -205,20 +204,13 @@ def part2(data):
 
 
     filteredoutmap = [(t[0], t[1]) for t in outmap if  0 <= t[0] < h and  0 <= t[1] < w ]
-
-    images = []
-
-
     for x in extpipemap:
         plt.plot(x[1], h - x[0], '.b')
-    plt.savefig("a", dpi=1000)
-    # images.append(imageio.imread("a.png"))
+    plt.savefig("a")
     for x in filteredoutmap:
         plt.plot(x[1], h - x[0], '.r')
 
-    plt.savefig("b", dpi=1000)
-    # images.append(imageio.imread("b.png"))
-
+    plt.savefig("b")
     print(len(filteredoutmap))
     intiles = 0
 
@@ -234,11 +226,7 @@ def part2(data):
                 plt.plot(t[1], h - t[0], '.g')
 
     plt.savefig("c")
-    # images.append(imageio.imread("c.png"))
-    # imageio.mimsave('movie.gif', images, loop=10000, duration=2)
     plt.show()
-
-    print(intiles)
 
     print(w*h, len(pipemap), len(outmap)-2*w-2*h, intiles)
     return intiles
