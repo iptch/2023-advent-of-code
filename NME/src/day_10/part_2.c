@@ -29,22 +29,20 @@ struct coord {
 
 void do_work(char **lines, int line_count, const int *chars_per_line);
 void flood(int x, int y, int **grid, char **lines, int n, int m);
-void print_grid(int **grid, int a, int b);
+void print_grid(int **grid, char **lines, int a, int b);
 
 int main(int argc, char *argv[]) {
     execute_on_input(INPUT_FILE, &do_work);
     return 0;
 }
 
-void print_grid(int **grid, int a, int b) {
+void print_grid(int **grid, char **lines, int a, int b) {
     for (int i=0; i<a; i++) {
         for (int j=0; j<b; j++) {
             int state = grid[i][j];
             char c = ' ';
-            if (state == 1) c = '.';
+            if (state == 1) c = lines[i][j];
             if (state == 2) c = 'X';
-
-
             printf("%c", c);
         }
         printf("\n");
@@ -215,7 +213,7 @@ void do_work(char **lines, int line_count, const int *chars_per_line) {
         count++;
     }
 
-    //print_grid(visited, line_count, chars_per_line[0]);
+    //print_grid(visited, lines, line_count, chars_per_line[0]);
 
     for (int i=0; i<line_count; i++) {
         for (int j=0; j<chars_per_line[i]; j++) {
@@ -223,7 +221,7 @@ void do_work(char **lines, int line_count, const int *chars_per_line) {
         }
     }
 
-    //print_grid(visited, line_count, chars_per_line[0]);
+    //print_grid(visited, lines, line_count, chars_per_line[0]);
 
     int res = 0;
     for (int i=0; i<line_count; i++) {
