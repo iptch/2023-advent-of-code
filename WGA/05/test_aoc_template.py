@@ -16,52 +16,59 @@ def example2():
     puzzle_input = (PUZZLE_DIR / "example2.txt").read_text().strip()
     return aoc.parse(puzzle_input)
 
-def test_get_destination():
+def test_get_destination(example1):
     """Test that destination is mapped properly."""
-    assert aoc.get_destination(99, [
-        [50, 98,  2],
-        [52, 50, 48]
-    ]) == 51
+    assert aoc.get_dest(99, example1["maps"][0]) == 51
 
 def test_get_location(example1):
     """Test that location is mapped properly."""
-    assert aoc.get_location(79, example1) == 82
+    assert aoc.get_location(79, example1["maps"]) == 82
+
+def test_get_dest_ranges(example1):
+    """Test that location ranges are mapped properly."""
+    assert aoc.get_dest_ranges([(79, 93)], example1["maps"][0]) == [(81, 95)]
+
+def test_get_location_ranges(example1):
+    """Test that location ranges are mapped properly."""
+    assert aoc.get_location_ranges((79, 93), example1["maps"]) == [(82, 85), (46, 56), (60, 61)]
 
 def test_parse_example1(example1):
     """Test that input is parsed properly."""
     assert example1 == {
         "seeds": [79, 14, 55, 13],
-        "seed_to_soil": [
-            [50, 98,  2],
-            [52, 50, 48]
-        ],
-        "soil_to_fertilizer": [
-            [ 0, 15, 37],
-            [37, 52,  2],
-            [39,  0, 15]
-        ],
-        "fertilizer_to_water": [
-            [49, 53,  8],
-            [ 0, 11, 42],
-            [42,  0,  7],
-            [57,  7,  4]
-        ],
-        "water_to_light": [
-            [88, 18,  7],
-            [18, 25, 70]
-        ],
-        "light_to_temperature": [
-            [45, 77, 23],
-            [81, 45, 19],
-            [68, 64, 13]
-        ],
-        "temperature_to_humidity": [
-            [ 0, 69,  1],
-            [ 1,  0, 69]
-        ],
-        "humidity_to_location": [
-            [60, 56, 37],
-            [56, 93,  4]
+        "maps": [
+            [
+                (52,  50,  98),
+                (50,  98, 100)
+            ],
+            [
+                (39,   0,  15),
+                ( 0,  15,  52),
+                (37,  52,  54)
+            ],
+            [
+                (42,   0,   7),
+                (57,   7,  11),
+                ( 0,  11,  53),
+                (49,  53,  61)                
+            ],
+            [
+                (88,  18,  25),
+                (18,  25,  95)
+            ],
+            [
+                (81,  45,  64),
+                (68,  64,  77),
+                (45,  77, 100)
+            ],
+            [
+                ( 1,   0,  69),
+                ( 0,  69,  70)
+            ],
+            [
+                (60,  56,  93),
+                (56,  93,  97)
+            ]
         ]
     }
 
