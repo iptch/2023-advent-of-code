@@ -2,6 +2,7 @@
 
 import pathlib
 import sys
+import re
 
 def get_hash(str):
     count = 0
@@ -23,6 +24,32 @@ def part1(data):
 
 def part2(data):
     """Solve part 2."""
+    
+    hashmap = [[] for _ in range(256)]
+
+    for step in data:
+        label = re.search(r"[a-z]+", step).group()
+        box = hashmap[get_hash(label)]
+        given_labels = [lens[0] for lens in box]
+        i = given_labels.index(label) if label in given_labels else -1
+
+        if step[len(label)] == "=":
+            focal_length = int(step[-1])
+
+            if i > -1:
+                box[i] = (label ,focal_length)
+            else:
+                box.append((label, focal_length))
+        elif i > -1:
+            box.pop(i)
+
+    count = 0
+
+    for i, box in enumerate(hashmap):
+        for j, lens in enumerate(box):
+            count += (i + 1) * (j + 1) * lens[1]
+
+    return count
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input."""
