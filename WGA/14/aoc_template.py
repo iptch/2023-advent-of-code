@@ -32,6 +32,36 @@ def tilt_south(data):
 def tilt_east(data):
     return [list(reversed(tilt(list(reversed(line))))) for line in data]
 
+def cycle(positions):
+    return tilt_east(tilt_south(tilt_west(tilt_north(positions))))
+
+def brent(f, x0):
+    power = lam = 1
+    tortoise = x0
+    hare = f(x0)
+
+    while tortoise != hare:
+        if power == lam:
+            tortoise = hare
+            power *= 2
+            lam = 0
+        hare = f(hare)
+        lam += 1
+
+    tortoise = hare = x0
+
+    for i in range(lam):
+        hare = f(hare)
+
+    mu = 0
+
+    while tortoise != hare:
+        tortoise = f(tortoise)
+        hare = f(hare)
+        mu += 1
+ 
+    return lam, mu
+
 def parse(puzzle_input):
     """Parse input."""
 
@@ -48,17 +78,15 @@ def part1(data):
 def part2(data):
     """Solve part 2."""
 
-    loads = []
+    lam, mu = brent(cycle, data)
+    remainder = (1000000000 - mu) % lam
+
     positions = data
 
-    for _ in range(3):
-        positions = tilt_east(tilt_south(tilt_west(tilt_north(positions))))
-        loads.append(sum([sum([len(line) - i - 1 for i, x in enumerate(line) if x == "O"]) for line in transpose(positions)]))
+    for _ in range(mu + lam + remainder):
+        positions = cycle(positions)
 
-    for line in positions:
-        print("".join(line))
-
-    return 0
+    return (sum([sum([len(line) - i - 1 for i, x in enumerate(line) if x == "O"]) for line in transpose(positions)]))
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input."""
