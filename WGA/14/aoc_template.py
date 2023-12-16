@@ -45,12 +45,13 @@ def brent(f, x0):
             tortoise = hare
             power *= 2
             lam = 0
+
         hare = f(hare)
         lam += 1
 
     tortoise = hare = x0
 
-    for i in range(lam):
+    for _ in range(lam):
         hare = f(hare)
 
     mu = 0
