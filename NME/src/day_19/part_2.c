@@ -109,11 +109,11 @@ void do_work(char **lines, int line_count, const int *chars_per_line) {
                 current->condition_operation = condition;
                 current->condition_constant = atoi(condition_constant);
                 current->next_if_true = find(steps, if_true, step_idx);
-                printf("%s -> %s\n", current->name, current->next_if_true->name);
+                //printf("%s -> %s\n", current->name, current->next_if_true->name);
 
                 if (previous) {
                     previous->next_if_false = current;
-                    printf("%s -> %s\n", previous->name, previous->next_if_false->name);
+                    //printf("%s -> %s\n", previous->name, previous->next_if_false->name);
                 }
 
                 previous = current;
@@ -126,7 +126,7 @@ void do_work(char **lines, int line_count, const int *chars_per_line) {
             } else {
                 transition[strlen(transition) - 1] = '\0';
                 previous->next_if_false = find(steps, transition, step_idx);
-                printf("%s -> %s\n", previous->name, previous->next_if_false->name);
+                //printf("%s -> %s\n", previous->name, previous->next_if_false->name);
                 free(current);
             }
             transition = strtok(NULL, ",");
