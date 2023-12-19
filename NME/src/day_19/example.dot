@@ -1,0 +1,31 @@
+digraph {
+overlap = scale;
+px -> qkq
+px0 -> A
+px -> px0
+px0 -> rfg
+pv -> R
+pv -> A
+lnx -> A
+lnx -> A
+rfg -> gd
+rfg0 -> R
+rfg -> rfg0
+rfg0 -> A
+qs -> A
+qs -> lnx
+qkq -> A
+qkq -> crn
+crn -> A
+crn -> R
+in -> px
+in -> qqz
+qqz -> qs
+qqz0 -> hdj
+qqz -> qqz0
+qqz0 -> R
+gd -> R
+gd -> R
+hdj -> A
+hdj -> pv
+}
