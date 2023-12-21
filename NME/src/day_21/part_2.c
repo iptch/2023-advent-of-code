@@ -89,11 +89,11 @@ void do_work(char **lines, int line_count, const int *chars_per_line) {
     int64_t **new_grid = init_grid(n, m);
     grid[x + (EXPANDING_FACTOR / 2) * line_count][y + (EXPANDING_FACTOR / 2) * chars_per_line[0]] = 1;
 
-    int64_t a0 = 3884;
-    int64_t a1 = 34564;
-    int64_t a2 = 95816;
+    int64_t a0 = 0;
+    int64_t a1 = 0;
+    int64_t a2 = 0;
     for (int64_t s=0; s<ITERATIONS; s++) {
-        print_grid(grid, lines, n, m);
+        //print_grid(grid, lines, n, m);
         if (s == line_count / 2) a0 = count_steps(grid, n, m);
         if (s == line_count / 2 + line_count) a1 = count_steps(grid, n, m);
         if (s == line_count / 2 + line_count * 2) a2 = count_steps(grid, n, m);
