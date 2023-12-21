@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <ctype.h>
+#include <stdint.h>
 #include "aoc_utils/aoc_utils.h"
 
 #define IS_EXAMPLE
@@ -11,6 +12,7 @@
 #else
 #define INPUT_FILE "input.txt"
 #endif
+
 void do_work(char **lines, int line_count, const int *chars_per_line);
 
 int main(int argc, char *argv[]) {

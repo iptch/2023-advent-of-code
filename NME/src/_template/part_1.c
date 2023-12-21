@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <ctype.h>
+#include <stdint.h>
 #include "aoc_utils/aoc_utils.h"
 
 #define IS_EXAMPLE
