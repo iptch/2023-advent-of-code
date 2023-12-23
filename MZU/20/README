@@ -1,0 +1,26 @@
+I solved part 2 on pen an paper (see the drawing.pdf).
+
+Process:
+
+1. Draw the graph based on the puzzle input
+2. Think backwards: what would need to happen so that rx receives a low signal:
+   - all 4 conjunction modules that are connected to vf need to send a high pulse at the same time
+   - all 4 conjunction modules in the circles need to send a low pulse at the same time
+   - all flip flops in a circle need to be in the ON state at the same time so that they all send a high signal
+3. Think forwards: what happens when a low pulse is sent from the broadcaster to the circles?
+   - the first flip flop in the circle switches between ON and OFF with every pulse
+   - whenever it is switched OFF (every second pulse) it will send a low pulse to the next flip flop, causing it to switch
+   - so the second flip flop in a circle will switch between ON and OFF every 4 pulses.
+   - the third flip flop will only receive a low pulse every 8 pulses and so it takes 8 pulses until it is ON the first time.
+   - if we continue this, we see that each flip flop needs 2ˆx pulses to switch ON, where x is the order of the flip flop in the circle.
+4. Put it all together:
+   - we see that only some of the flip flops send their signal to the conjunction module of the circle. So only these have to be ON at the same time.
+   - we can find out the first time that this happens by summing up 2ˆx for the flip flops which are connected to the conjunction module.
+   - instead of summing this up, we can write each circle as a bit string, and then translate this to decimal system.
+   - For my puzzle input, I received four numbers: 4013, 4021, 3889, 3881
+   - We can use the least common denominator to find out when it is the first time that all the circles are in the correct state.
+   - We know that because, after one circle has arrived at this state, it will reset and repeat: the conjunction module sends back a low pulse to all the
+     remaining flip flops that were not yet ON, resulting in all flip flops of the circles being ON. The conjunction module also sends
+     a pulse back to the first flip flop of the circle. It must be a low pulse since all flip flops were in high state. So this low pulse will
+     switch off the first flip flop in the circle and pass on the low pulse one by one, until all are switched off (which is equal to the
+     initial state). Then everything starts again from the beginning.

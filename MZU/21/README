@@ -1,0 +1,17 @@
+For part 2, I used year2023_day21b.py to brute force until 1000 steps.
+Then I copied the output to a Google Sheets file and tried to find a pattern.
+I did: I calculated the differences between the results after each step,
+and then again the differences of the differences between each step.
+I plotted these numbers and found that there is a repeating pattern, that
+"bloats" over time but in a constant rate.
+With these insights I could calculate the final result with the code in
+year2023_dayb_formula.py. I could find the numbers that need to be inserted
+in the formula from playing with the Excel file.
+
+I needed:
+- the length of the pattern
+- the step count when the pattern starts the first time
+- the index within the pattern where the step count that is asked in the puzzle will end up -> with this I can get the next number:
+- the initial value that this index has in the first occurrence of the pattern
+- the difference between the initial value and the value at the same index in the next pattern repetition
+- the magic number = the growth factor of the difference between pattern repetitions
