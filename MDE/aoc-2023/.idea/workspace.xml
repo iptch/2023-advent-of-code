@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8d017ae7-5ee3-4e09-9e9a-ef1e9b8c3d53" name="Changes" comment="MDE: Day 23">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/brathis/aoc2023/puzzles/Day21_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/brathis/aoc2023/puzzles/Day21_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/brathis/aoc2023/puzzles/Day24_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/brathis/aoc2023/puzzles/Day24_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/brathis/aoc2023/puzzles/Day25_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/21_2_output.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/puzzleInputs/21.test.bak.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/puzzleInputs/21.test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/puzzleInputs/21.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/puzzleInputs/24.test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/puzzleInputs/24.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/puzzleInputs/25.test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/puzzleInputs/25.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/01_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/01_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2ZzoYJIbR0DE6bTPO4hlimVOlb7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.08_2 TEST.executor": "Run",
+    "Application.08_2.executor": "Run",
+    "Application.10_1 TEST.executor": "Run",
+    "Application.10_1.executor": "Run",
+    "Application.10_2 TEST.executor": "Run",
+    "Application.10_2.executor": "Run",
+    "Application.11_1 TEST.executor": "Run",
+    "Application.11_1.executor": "Run",
+    "Application.11_2 TEST.executor": "Run",
+    "Application.11_2.executor": "Run",
+    "Application.12_1 TEST.executor": "Run",
+    "Application.12_1.executor": "Run",
+    "Application.12_2 TEST.executor": "Run",
+    "Application.12_2.executor": "Run",
+    "Application.17_1 TEST.executor": "Run",
+    "Application.17_1.executor": "Run",
+    "Application.17_2 TEST.executor": "Run",
+    "Application.17_2.executor": "Run",
+    "Application.18_1 TEST.executor": "Run",
+    "Application.18_1.executor": "Run",
+    "Application.18_2 TEST.executor": "Run",
+    "Application.18_2.executor": "Run",
+    "Application.19_1 TEST.executor": "Run",
+    "Application.19_1.executor": "Run",
+    "Application.19_2 TEST.executor": "Run",
+    "Application.19_2.executor": "Run",
+    "Application.20_1 TEST.executor": "Run",
+    "Application.20_1.executor": "Run",
+    "Application.20_2.executor": "Run",
+    "Application.21_1 TEST.executor": "Run",
+    "Application.21_1.executor": "Run",
+    "Application.21_2 TEST.executor": "Run",
+    "Application.21_2.executor": "Run",
+    "Application.22_1 TEST.executor": "Run",
+    "Application.22_1.executor": "Run",
+    "Application.22_2 TEST.executor": "Run",
+    "Application.22_2.executor": "Run",
+    "Application.23_1 TEST.executor": "Run",
+    "Application.23_1.executor": "Run",
+    "Application.23_2 TEST.executor": "Run",
+    "Application.23_2.executor": "Run",
+    "Application.24_1 TEST.executor": "Run",
+    "Application.24_1.executor": "Run",
+    "Application.24_2 TEST.executor": "Run",
+    "Application.24_2.executor": "Run",
+    "Application.25_1 TEST.executor": "Run",
+    "Maven.aoc-2023 [compile].executor": "Run",
+    "Notification.DisplayName-DoNotAsk-External System Auto-Link Notification Group": "External system build scripts found",
+    "Notification.DoNotAsk-External System Auto-Link Notification Group": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/mathis/git/2023-advent-of-code/MDE/aoc-2023/src/main/resources/puzzleInputs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/puzzleInputs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dev.brathis.aoc2023.puzzles" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.21_2">
+    <configuration name="21_2 TEST" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="dev.brathis.aoc2023.Main" />
+      <module name="aoc-2023" />
+      <option name="PROGRAM_PARAMETERS" value="21 2 test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="21_2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="dev.brathis.aoc2023.Main" />
+      <module name="aoc-2023" />
+      <option name="PROGRAM_PARAMETERS" value="21 2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.21_2 TEST" />
+      <item itemvalue="Application.21_2" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8d017ae7-5ee3-4e09-9e9a-ef1e9b8c3d53" name="Changes" comment="" />
+      <created>1703434316749</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703434316749</updated>
+      <workItem from="1703434317759" duration="2687000" />
+      <workItem from="1703504865505" duration="3241000" />
+      <workItem from="1703508718745" duration="1127000" />
+      <workItem from="1703518737265" duration="207000" />
+      <workItem from="1703518956585" duration="3158000" />
+      <workItem from="1703607471465" duration="118000" />
+      <workItem from="1703607630674" duration="1531000" />
+      <workItem from="1703669364950" duration="790000" />
+      <workItem from="1703670656188" duration="221000" />
+      <workItem from="1703670935833" duration="129000" />
+      <workItem from="1703671078323" duration="8335000" />
+      <workItem from="1703704490388" duration="9980000" />
+      <workItem from="1703717400087" duration="603000" />
+      <workItem from="1703718030400" duration="1898000" />
+      <workItem from="1703750242095" duration="7199000" />
+      <workItem from="1703926710213" duration="17814000" />
+      <workItem from="1704017914767" duration="1516000" />
+      <workItem from="1704023935021" duration="41000" />
+      <workItem from="1704041936490" duration="325000" />
+      <workItem from="1704042317663" duration="3725000" />
+      <workItem from="1704109726542" duration="18383000" />
+      <workItem from="1704183836166" duration="10575000" />
+      <workItem from="1704204536777" duration="10798000" />
+      <workItem from="1704274970498" duration="10813000" />
+      <workItem from="1704309744659" duration="14966000" />
+      <workItem from="1704360824591" duration="2641000" />
+      <workItem from="1704400869490" duration="613000" />
+      <workItem from="1704541096327" duration="14918000" />
+      <workItem from="1704563936684" duration="5867000" />
+      <workItem from="1704571464722" duration="9956000" />
+      <workItem from="1704620327732" duration="13918000" />
+      <workItem from="1704745023605" duration="15000" />
+      <workItem from="1704745341617" duration="6465000" />
+      <workItem from="1704800254118" duration="7712000" />
+      <workItem from="1704866287759" duration="3691000" />
+      <workItem from="1704910244943" duration="670000" />
+      <workItem from="1705221437621" duration="22402000" />
+    </task>
+    <task id="LOCAL-00001" summary="MDE: Day 10">
+      <option name="closed" value="true" />
+      <created>1703680532776</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703680532776</updated>
+    </task>
+    <task id="LOCAL-00002" summary="MDE: Day 11">
+      <option name="closed" value="true" />
+      <created>1703706936163</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703706936163</updated>
+    </task>
+    <task id="LOCAL-00003" summary="MDE: Day 18">
+      <option name="closed" value="true" />
+      <created>1704044403682</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704044403682</updated>
+    </task>
+    <task id="LOCAL-00004" summary="MDE: Day 20">
+      <option name="closed" value="true" />
+      <created>1704194954173</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704194954173</updated>
+    </task>
+    <task id="LOCAL-00005" summary="MDE: Day 8 Part 2">
+      <option name="closed" value="true" />
+      <created>1704222132829</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704222132829</updated>
+    </task>
+    <task id="LOCAL-00006" summary="MDE: Day 12">
+      <option name="closed" value="true" />
+      <created>1704297235333</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704297235333</updated>
+    </task>
+    <task id="LOCAL-00007" summary="MDE: Day 17">
+      <option name="closed" value="true" />
+      <created>1704401249593</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704401249593</updated>
+    </task>
+    <task id="LOCAL-00008" summary="MDE: Day 19">
+      <option name="closed" value="true" />
+      <created>1704548749422</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704548749423</updated>
+    </task>
+    <task id="LOCAL-00009" summary="MDE: Day 22">
+      <option name="closed" value="true" />
+      <created>1704568506588</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704568506588</updated>
+    </task>
+    <task id="LOCAL-00010" summary="MDE: Day 23">
+      <option name="closed" value="true" />
+      <created>1704629694622</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704629694622</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MDE: Day 10" />
+    <MESSAGE value="MDE: Day 11" />
+    <MESSAGE value="MDE: Day 18" />
+    <MESSAGE value="MDE: Day 20" />
+    <MESSAGE value="MDE: Day 8 Part 2" />
+    <MESSAGE value="MDE: Day 12" />
+    <MESSAGE value="MDE: Day 17" />
+    <MESSAGE value="MDE: Day 19" />
+    <MESSAGE value="MDE: Day 22" />
+    <MESSAGE value="MDE: Day 23" />
+    <option name="LAST_COMMIT_MESSAGE" value="MDE: Day 23" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="current.rowIdx == 1 &amp;&amp; current.colIdx == 3" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/main/java/dev/brathis/aoc2023/puzzles/Day17_1_Also_Broken.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/brathis/aoc2023/puzzles/Day17_1_Also_Broken.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
